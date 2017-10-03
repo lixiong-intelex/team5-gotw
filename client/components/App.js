@@ -1,20 +1,10 @@
 import React from 'react';
+import GeekList from './GeekList.js'
 
-// export default class App extends React.Component {
-//   render() {
-//     return (
-//      <div style={{textAlign: 'center'}}>
-//         <h1>Hello World</h1>
-//       </div>);
-//   }
-// }
-
-const App = function() {
+export default class App extends React.Component {
+  render() {
     return (
-        <div>
-            <h1>test</h1>
-        </div>
+     <GeekList />
     );
+  }
 }
-
-module.exports = App;
