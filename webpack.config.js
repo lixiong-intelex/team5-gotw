@@ -19,6 +19,10 @@ module.exports = {
       { test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/ }
     ]
   },
+  
+  devServer: {
+    open: true
+  },
 
   plugins: [HtmlWebpackPluginConfig]
 }
