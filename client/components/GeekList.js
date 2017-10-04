@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Geek from './geek.js'
+import GeekRow from './GeekRow.js'
+import GeekDetail from './GeekDetail/GeekDetail.js'
+import { Grid, Jumbotron } from 'react-bootstrap'
 
 var data = [
     {pictureUrl: "http://placehold.it/75", name: "Einstein", teaser: "invented Atom Bomb"},
@@ -11,10 +13,15 @@ export default class GeekList extends React.Component{
     render(){
       return (
         <div>
-          {
-            data.map((g, i) => <Geek key={i} {...g} />)
-            //{/* data.map((g, i) => <Geek key={i} pictureUrl={g.pictureUrl} name={g.name} />) */}
-          }
+          <Jumbotron>
+            <h1>Welcome!</h1>
+            <p>Please click on one of the following geeks to view more information</p>
+          </Jumbotron>
+          <Grid>          
+            {
+              data.map((g, i) => <GeekRow key={i} {...g} />)
+            }
+          </Grid>
         </div>
       );
     }
