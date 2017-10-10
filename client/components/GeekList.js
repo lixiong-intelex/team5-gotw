@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import GeekRow from './GeekRow.js';
 import GeekDetail from './GeekDetail/GeekDetail.js';
-import Link from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import Nav from './Nav';
 
 import { Grid, Jumbotron } from 'react-bootstrap'
 
@@ -18,13 +19,14 @@ export default class GeekList extends React.Component{
           <Jumbotron>
             <h1>Welcome!</h1>
             <p>Please click on one of the following geeks to view more information</p>
+            <Nav />
           </Jumbotron>
           <Grid>          
             {
               data.map((g, i) => 
-                <Link to={"/geekdetail/${i}"}>
+                <Link to={`/geekdetail/${i}`}>
                   <GeekRow key={i} {...g} />
-                </Link>
+                </Link>              
               )
             }
           </Grid>

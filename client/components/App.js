@@ -7,9 +7,8 @@ import GeekDetail from './GeekDetail/GeekDetail.js'
 export default class App extends React.Component {
   render() {
     return (
-      <div>
-        <GeekList />
-        <Routes />
+      <div>       
+        { <Routes /> }
       </div>
     )
   }
