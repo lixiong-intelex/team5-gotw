@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Grid, Row, Col, Jumbotron } from 'react-bootstrap'
+import { MockData } from '../MockData.js';
 
 export default class GeekDetail extends React.Component{
     render(){
       return (
         <div>
             <div className="col-md-6 col-md-offset-3">
-                <h1>Geek Name</h1>
-                <p>Born - Die</p>
+                <h1>{this.props.name}</h1>
+                <p>{this.props.match.params.id}</p>
             </div>
             <Grid>
                 <Row>

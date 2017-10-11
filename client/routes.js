@@ -10,7 +10,7 @@ export default class Routes extends React.Component {
             <Switch>
                 <Route exact path='/' component={GeekList} />
                 <Route exact path='/about' component={About} />
-                <Route exact path='/geekdetail' component={GeekDetail} />
+                <Route exact path='/geekdetail/:id' component={GeekDetail} />
             </Switch>
         )
     }
