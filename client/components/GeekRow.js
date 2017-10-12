@@ -7,7 +7,7 @@ export default class GeekRow extends React.Component{
       return (
         <Row>
           <Col md={4}>
-            <img className="geek-thumb" src={this.props.pictureUrl} />
+            <img className="geek-thumb" src={this.props.thumbnailUrl} />
           </Col>
           <Col md={8}>
             <div className="geek-title">{this.props.name}</div> 
