@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Grid, Row, Col, Jumbotron, ListGroup, ListGroupItem } from 'react-bootstrap'
 import { MockData } from '../MockData.js';
+import Teaser from './Teaser'
 
 export default class GeekDetail extends React.Component{
     render(){
@@ -20,10 +21,16 @@ export default class GeekDetail extends React.Component{
                     </Col>
                     <Col md={4}></Col>
                 </Row>
-                <br />
+                <Row>
+                    <Col md={12}>
+                        <Teaser teaserText={geek.teaser} />
+                    </Col>
+                </Row>
+                <Row>
                 <ListGroup>
                     {geek.facts.map((f, i) => <ListGroupItem key={i}>{f}</ListGroupItem>)}
                 </ListGroup>
+                </Row>
             </Grid>
         </div>
       );
