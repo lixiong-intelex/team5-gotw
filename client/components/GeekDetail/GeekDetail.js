@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Grid, Row, Col, Jumbotron, ListGroup, ListGroupItem } from 'react-bootstrap'
-import { MockData } from '../MockData.js';
+import { MockData } from '../MockData';
 import Teaser from './Teaser'
 
 export default class GeekDetail extends React.Component{

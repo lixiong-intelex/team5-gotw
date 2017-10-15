@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import GeekRow from './GeekRow.js';
-import GeekDetail from './GeekDetail/GeekDetail.js';
+import GeekDetail from './GeekDetail/GeekDetail';
 import { Link } from 'react-router-dom';
-import { MockData } from './MockData.js';
+import { MockData } from './MockData';
 
 import { Grid, Jumbotron } from 'react-bootstrap'
 
