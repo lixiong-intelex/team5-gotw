@@ -12,5 +12,10 @@ export const MockData = {
 
     getGeekById: function(id) {
         return this._data.filter(d => d.id == id)[0] || {};
+    },
+
+    save: function(geek) {
+        var existingGeek = this.getGeekById(geek.id);
+        existingGeek = Object.assign({}, existingGeek, geek);
     }
 }

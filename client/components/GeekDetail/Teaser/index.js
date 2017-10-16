@@ -10,17 +10,22 @@ export default class Teaser extends React.Component{
          };
       }
 
-    updateTeaser() {
+    updateTeaser(teaserText) {
         this.setState({
-            isEdit: !this.state.isEdit,
-            //teaserText: this.state.teaserText
+            teaserText: teaserText
+        });
+    }
+
+    updateIsEdit() {
+        this.setState({
+            isEdit: !this.state.isEdit
         });
     }
 
     render() {
         let element = this.state.isEdit ? 
-                <input onClick={ this.updateTeaser.bind(this) } type='text' value={this.state.teaserText} /> :
-                <p onClick={ this.updateTeaser.bind(this) }>{ this.state.teaserText } </p> ;
+                <input onChange={ (event) => { this.updateTeaser(event.target.value); } } onBlur = { () => { this.updateIsEdit(); }} type='text' value={this.state.teaserText} /> :
+                <p onClick={ () =>  { this.updateIsEdit(this.state.teaserText); }}>{ this.state.teaserText } </p> ;
         return (
             <div>
                { element }
