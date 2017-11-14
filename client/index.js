@@ -2,18 +2,17 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App.js';
+import App from './components/App/App';
 import styles from './styles/styles.css';
-import {BrowserRouter as Router} from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import configureStore from './store/configureStore';
-import Routes from './routes'
+import { InitialState }  from './components/App/initialState'
 
-const routes = Routes;
-//const store = configureStore();
+// const store = configureStore(InitialState);
 
 ReactDOM.render(
-    <Router routes={routes}>
+    <BrowserRouter>
         <App />
-    </Router>
+    </BrowserRouter>
     , document.getElementById('root')
 );

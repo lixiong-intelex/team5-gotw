@@ -21,7 +21,8 @@ module.exports = {
   },
 
   devServer: {
-    open: true
+    open: true,               // open a page by default
+    historyApiFallback: true  // ensure that directly accessing a url or refreshing the browser works
   },
 
   plugins: [HtmlWebpackPluginConfig]
