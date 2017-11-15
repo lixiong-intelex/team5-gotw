@@ -1,3 +1,3 @@
 export const InitialState = {
-    foo: 'bar',
+    geekList: [],
 }

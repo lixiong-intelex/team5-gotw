@@ -19,7 +19,9 @@ function mapStateToProps(state, ownProps) {
 }
 
 function mapDispatchToProps() {
-
+    return {
+        // Todo if needed
+    };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(GeekList);
