@@ -1,8 +1,8 @@
-import {combineReducers} from 'redux';
-// import {myClass} from './myClassReducer';
+import { combineReducers } from 'redux';
+import  geekList  from './geekListReducer';
 
 const rootReducer = combineReducers({
-    // myClass,
+    geekList,
 });
 
 export default rootReducer;

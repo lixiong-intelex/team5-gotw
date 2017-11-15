@@ -12,7 +12,6 @@ export default class Nav extends Component  {
                     <Link className="navbar-brand" to="/">Geek of the Week</Link>                    
                 </div>
                 <ul className="nav navbar-nav">
-                    <li><Link to="/">GeekList</Link></li>
                     <li><Link to="/about">About</Link></li>
                     <li><Link to="/todo">Todo</Link></li>
                 </ul>

@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-export default class GeekList extends Component  {
+class GeekList extends Component  {    
     render() {
         return(
             <div className="container">
@@ -11,3 +12,14 @@ export default class GeekList extends Component  {
     };
 }
 
+function mapStateToProps(state, ownProps) {
+    return {
+        // Todo
+    };
+}
+
+function mapDispatchToProps() {
+
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(GeekList);
